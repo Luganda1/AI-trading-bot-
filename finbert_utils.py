@@ -8,6 +8,19 @@ model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert").t
 labels = ["positive", "negative", "neutral"]
 
 def estimate_sentiment(news):
+    """Performs sentiment analysis on financial news text using a pre-trained machine learning model. Determines the sentiment probability and classification for the given input.
+
+Processes the input news text through a sentiment analysis model to extract its emotional tone and confidence level. Returns a neutral sentiment with zero probability if no text is provided.
+
+Args:
+    news (str): The financial news text to be analyzed.
+
+Returns:
+    tuple: A tuple containing (sentiment_probability, sentiment_label).
+        - sentiment_probability (float): Confidence score of the sentiment prediction.
+        - sentiment_label (str): Predicted sentiment category (e.g., positive, negative, neutral).
+""""
+    
     if news:
         tokens = tokenizer(news, return_tensors="pt", padding=True).to(device)
 

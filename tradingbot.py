@@ -13,8 +13,8 @@ load_dotenv()
 
 # Leaning more https://forum.alpaca.markets/t/manually-trading-stocks-using-postman-and-the-alpaca-api/166
 
-API_KEY = "PK4ADA600KF3A6UARD49"
-API_SECRET = "MsrKOH9TNhezArSCJoKM9ZONwn7GvuUm5g0hpmAw"
+API_KEY = ""
+API_SECRET = ""
 # API_KEY = os.getenv('API_KEY')
 # SECRET_API_KEY = os.getenv('SECRET_API_KEY')
 BASE_URL = "https://paper-api.alpaca.markets"
